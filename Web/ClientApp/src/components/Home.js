@@ -19,7 +19,7 @@ class Home extends Component {
 
     onClickSearchEmployee = (e) => {
         e.preventDefault();
-        const employeeId = this.state.employeeId;
+        const employeeId = this.state.employeeId.trim();
         this.props.requestEmployees(employeeId);
     }
 
@@ -63,7 +63,7 @@ class Home extends Component {
             <React.Fragment>
                 <div className="jumbotron">
                     <h1 className="display-6">Welcome to <strong>Employee Salary</strong> App</h1>
-                    <p className="lead">This app allow you know the Annual Salary of each Employee dependig of their contract.</p>
+                    <p className="lead">This app allow you know the Annual Salary of each Employee.</p>
                 </div>
                 <form>
                     <div class="mb-3 row align-items-end">
